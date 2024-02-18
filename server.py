@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 from time import strftime, gmtime
 
-os.system('clear')
+os.system('cls' if os.name == 'nt' else 'clear')
 
 HEADER = 2048
 FORMAT = 'utf-8'
@@ -29,11 +29,12 @@ else:
         NAME = input("server name: ")
         SERVER = socket.gethostbyname(socket.gethostname())
         ADDR = (SERVER, PORT)
-        os.system("clear")
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("are these options correct?")
         print("port: "+PORT)
         print("name: "+NAME)
         if input("y/n: ").lower() == "y":
+            os.system('cls' if os.name == 'nt' else 'clear')
             break
 
     #save to file
