@@ -28,7 +28,7 @@ else:
         PORT = input("PORT: ")
         NAME = input("server name: ")
         SERVER = socket.gethostbyname(socket.gethostname())
-        ADDR = (SERVER, PORT)
+        ADDR = (SERVER, int(PORT))
         os.system('cls' if os.name == 'nt' else 'clear')
         print("are these options correct?")
         print("port: "+PORT)
@@ -124,4 +124,3 @@ def start():
 
 print(f"({strftime('%d %b %Y %H:%M', gmtime())})[server] is starting")
 start()
-
